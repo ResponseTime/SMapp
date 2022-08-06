@@ -31,10 +31,11 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login_page.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="phone.css">
     <title>SMapp</title>
 </head>
 <body>
-    <div class="App">SMapp</div>
+    <div class="App"><p> SMapp</p></div>
     <form action="" method = "post">
         <input type="text" name="usn" id = "usn"/>
         <input type="password" name="pass" id = "pass"/>
