@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    left: 31%;
+}
+
+.App{
+    left: 15%;
+    font-size: 11.5rem;
+}

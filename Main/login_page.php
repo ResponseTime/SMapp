@@ -31,7 +31,8 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login_page.css">
-    <link rel="stylesheet" media="screen and (max-width: 500px)" href="phone.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="phone.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px) and (min-width: 600px)" href="tablet.css">
     <title>SMapp</title>
 </head>
 <body>

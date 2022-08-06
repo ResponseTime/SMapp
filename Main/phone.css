@@ -3,20 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 form{
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: absolute;
-    left: 12%;
-    top: 20%;
- }
- .App{
+    left: 22%;
+}
+
+.App{
     margin: 0;
     padding: 0;
      position: absolute;
-     left: 18%;
+     left: 28%;
      top: 40px;
      text-align: center;
      font-size:3.5rem;
      text-align: center;
- }
+}
