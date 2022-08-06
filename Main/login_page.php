@@ -9,6 +9,7 @@ if($con){
         $dataset = mysqli_query($con,$sql);
         if(mysqli_num_rows($dataset)>0){
             $err = "Login Verified";
+            session_start();
             header('location: home.php');
         }
         else{
@@ -37,6 +38,7 @@ else{
     <form action="" method = "post">
         <input type="text" name="usn" id = "usn"/>
         <input type="password" name="pass" id = "pass"/>
+        <a href="forgot.php">Forget Password</a>
         <div id = "err"><?php echo "$err";?></div>
         <input type="submit" value="Login" id="sub"/>
         <Button><a href="signUp.php">Sign Up</a></Button>
