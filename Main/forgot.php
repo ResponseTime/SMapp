@@ -10,6 +10,7 @@ if($con){
             if(mysqli_num_rows($dataset)>0){
                 session_start();
                 $_SESSION["use"] = $us;
+                mysqli_close($con);
                 header('location: forget.php');
             }
             else{
@@ -23,6 +24,7 @@ if($con){
             if(mysqli_num_rows($dataset)>0){
                 session_start();
                 $_SESSION["use"] = $hj;
+                mysqli_close($con);
                 header('location: forget.php');
             }
             else{

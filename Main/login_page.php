@@ -9,6 +9,7 @@ if($con){
         $dataset = mysqli_query($con,$sql);
         if(mysqli_num_rows($dataset)>0){
             $err = "Login Verified";
+            mysqli_close($con);
             session_start();
             header('location: home.php');
         }

@@ -28,6 +28,7 @@ if($con){
             $sql = "update sign_up set Pass = '$new' where email = '$entry' or usn = '$entry'";
             mysqli_query($con,$sql);
             echo "password changed";
+            mysqli_close($con);
             sleep(5);
             header('location: home.php');
         }

@@ -1,0 +1,43 @@
+<?php
+$con = mysqli_connect("localhost","root","","SMapp");
+if($con){
+    if(!empty($_POST['user']) && !empty($_POST['pas']) && !empty($_POST['email'])){
+        $user = $_POST['user'];
+        $pass = $_POST['pas'];
+        $mail = $_POST['email'];
+        $sql = "insert into sign_Up values('$user','$pass','$mail')";
+        try {
+            mysqli_query($con,$sql);
+            $err = "Account Created";
+            mysqli_close($con);
+        } catch (Exception $e) {
+            $err = "Try changing the username";
+        }
+    }
+    else{
+        $err = "Enter all details";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign.css">
+    <title>Sign Up</title>
+</head>
+<body>
+<div class="App"><p> SMapp <br> Sign Up </p></div>
+    <form action="" method = "post">
+        <input type="text" name="user" id="" placeholder = "username">
+        <input type="password" name="pas" id="" placeholder = "password">
+        <input type="email" name="email" id="" placeholder = "Email">
+        <input type="submit" value="Create Account">
+        <?php echo $err; ?>
+        <button><a href="login_page.php">Login</a></button>
+    </form>
+</body>
+</html>
+
