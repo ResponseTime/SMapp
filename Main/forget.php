@@ -1,21 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forget.css">
-    <title>Change Password</title>
-</head>
-<body>
-    <form action="" method = "post">
-        <input type="password" name="new" id="new">
-        <input type="password" name="ret" id="retype">
-        <input type="submit" value="Change Password">
-    </form>
-</body>
-</html>
 <?php
 $con = mysqli_connect("localhost","root","","SMapp");
 if($con){
@@ -29,8 +11,6 @@ if($con){
             mysqli_query($con,$sql);
             echo "password changed";
             mysqli_close($con);
-            sleep(5);
-            header('location: home.php');
         }
         else{
             echo "Password should be same";
@@ -42,3 +22,22 @@ if($con){
     
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forget.css?v=<?php echo time(); ?>">
+    <title>Change Password</title>
+</head>
+<body>
+    <form action="" method = "post">
+        <input type="password" name="new" id="new">
+        <input type="password" name="ret" id="retype">
+        <input type="submit" value="Change Password">
+    </form>
+    <br>
+    <a href="login_page.php">Go Back to login page</a>
+</body>
+</html>
