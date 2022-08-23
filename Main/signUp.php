@@ -8,9 +8,6 @@ if($con){
         $sql = "insert into sign_Up values('$user','$pass','$mail')";
         try {
             mysqli_query($con,$sql);
-            GLOBAL $user;
-            $sq = "CREATE TABLE `".$user."`(followers VARCHAR(255),following VARCHAR(255))";
-            mysqli_query($con,$sq);
             $err = "Account Created";
             mysqli_close($con);
         } catch (Exception $e) {

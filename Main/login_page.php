@@ -11,6 +11,7 @@ if($con){
             $err = "Login Verified";
             mysqli_close($con);
             session_start();
+            $_SESSION['user'] = $usn;
             header('location: home.php');
         }
         else{
